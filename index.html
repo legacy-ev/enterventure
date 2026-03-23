@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enterventure | Architecting with Intelligence</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#eef1f3",
+              "on-primary-fixed-variant": "#1a0099",
+              "on-primary-fixed": "#000000",
+              "on-tertiary-fixed": "#330900",
+              "secondary": "#702ae1",
+              "outline-variant": "#abadaf",
+              "on-primary-container": "#14007e",
+              "surface-tint": "#4a40e0",
+              "surface-dim": "#d0d5d8",
+              "surface-container-lowest": "#ffffff",
+              "error": "#b41340",
+              "surface-container": "#e5e9eb",
+              "tertiary": "#9b3e20",
+              "error-dim": "#a70138",
+              "on-secondary": "#f8f0ff",
+              "tertiary-container": "#ff9472",
+              "surface-variant": "#d9dde0",
+              "on-tertiary-container": "#5e1700",
+              "tertiary-dim": "#8b3315",
+              "inverse-on-surface": "#9a9d9f",
+              "on-primary": "#f4f1ff",
+              "secondary-fixed": "#dcc9ff",
+              "primary-dim": "#3d30d4",
+              "primary-fixed-dim": "#8885ff",
+              "background": "#f5f7f9",
+              "primary-container": "#9795ff",
+              "on-secondary-container": "#5b00c7",
+              "on-tertiary": "#ffefeb",
+              "on-tertiary-fixed-variant": "#6d1d01",
+              "on-surface": "#2c2f31",
+              "secondary-fixed-dim": "#d0b8ff",
+              "inverse-primary": "#8582ff",
+              "tertiary-fixed": "#ff9472",
+              "surface-container-high": "#dfe3e6",
+              "on-secondary-fixed": "#430097",
+              "primary": "#4a40e0",
+              "on-error-container": "#510017",
+              "tertiary-fixed-dim": "#f6835f",
+              "secondary-dim": "#6411d5",
+              "secondary-container": "#dcc9ff",
+              "on-secondary-fixed-variant": "#6514d6",
+              "surface": "#f5f7f9",
+              "surface-container-highest": "#d9dde0",
+              "on-background": "#2c2f31",
+              "inverse-surface": "#0b0f10",
+              "primary-fixed": "#9795ff",
+              "surface-bright": "#f5f7f9",
+              "error-container": "#f74b6d",
+              "on-error": "#ffefef",
+              "on-surface-variant": "#595c5e",
+              "outline": "#747779"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+      .luminous-glow {
+        background: linear-gradient(135deg, #4a40e0 0%, #dcc9ff 100%);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #4a40e0 0%, #702ae1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      body {
+        cursor: default;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-3xl docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<div class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white flex items-center gap-2">
+<span class="w-8 h-8 rounded-full luminous-glow flex items-center justify-center text-white text-xs">E</span>
+<span>Enterventure</span>
+</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center space-gap-8 font-['Manrope'] font-medium text-sm tracking-tight">
+<div class="flex gap-8">
+<a class="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-500 pb-1" href="#">Capabilities</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Process</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Education</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Legal</a>
+</div>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</div>
+</nav>
+<main class="relative overflow-hidden">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
+<!-- Background Decoration -->
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute top-20 -right-40 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]"></div>
+<div class="relative z-10 space-y-8 max-w-4xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">The Future of Craft</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-on-surface">
+                    Architecting with <br/>
+<span class="text-gradient">Intelligence</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                    We fuse elite product engineering with the frontier of generative AI to create tools that feel like magic.
+                </p>
+</div>
+<!-- Visual Anchor -->
+<div class="mt-20 w-full max-w-5xl aspect-[21/9] rounded-xl overflow-hidden glass-card relative group">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-lowest/40 to-surface-container-low/20 z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40 group-hover:scale-105 transition-transform duration-1000" data-alt="Abstract translucent 3D glass shapes with light refraction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu_LqPjeJAbjl4bgDhmtqiFISsjXYbDfHvGPIAGOnXLemIqwMp7godyo9Hcvwwz2eWwXP_s6sk3GeeB-RfJuVHogPqZWlfsGi9Zc6adyRqmn2WLfzroCrtc4_USm5utWudHlSMPn_6OoSvjJV6EeP3mWbDbdtGylXndTX8wvrRhVLE2x_DNKmkv7t2uAfhC-ymbY9djqMe9n2-Ubg6B1imCcordZvr4XFbZR51mdUcvgu8yQ-lM1M2occz46mzU-cogi-MifxhCNk"/>
+<div class="absolute inset-0 flex items-center justify-center z-20">
+<div class="glass-card p-8 rounded-xl border border-white/20 shadow-2xl">
+<span class="material-symbols-outlined text-4xl text-primary" data-weight="fill">deployed_code</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Focus: Bento Grid -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="mb-20 text-center md:text-left">
+<h2 class="font-headline text-3xl md:text-5xl font-bold tracking-tight mb-6">Digital Artistry</h2>
+<p class="text-lg text-on-surface-variant max-w-xl">Building the next generation of digital infrastructure, from individual tools to comprehensive SaaS ecosystems.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-12 flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">fluid</span>
+</div>
+<h3 class="font-headline text-3xl font-bold">Enterprise SaaS</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Highly scalable, AI-driven platforms designed for complex workflows and high-performance teams.</p>
+</div>
+<div class="mt-12 h-48 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="Modern clean software interface abstraction with light glows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ZHtuB8VZrbcNbP7kUcC3CVStawsU_eJooVjYJGV3edbAi9_36ihrEPTx15OadTWbpmecxOfXJxQ7nZiR0Teb7hZFJkCT8VaMsCw0XLm20uCCfFr85Zg7A_7NSPieXkHd26r-LAcCL960-Gq5v_J2iewI5Vqo25NaOq-A7GuSF0QI43npTYFN54Jv8MOpwHwGJJgZ7GryKkBNd4jnQNZMv9scCLmka8HRbbYBf5Ieas-dNSn0VaqcfWUxDIfEJbQkzc7RbEnlJLo"/>
+</div>
+</div>
+<!-- Side Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-10 flex flex-col justify-center">
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold">Custom AI Tools</h3>
+<p class="text-on-surface-variant">Bespoke integrations that leverage Large Language Models to automate the unique friction in your business.</p>
+<div class="pt-4 flex gap-2">
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-label uppercase tracking-wider">Agents</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-label uppercase tracking-wider">Automations</span>
+</div>
+</div>
+</div>
+<!-- Bottom Row -->
+<div class="md:col-span-4 bg-surface-container-high rounded-xl p-10">
+<h3 class="font-headline text-2xl font-bold mb-4">Mobile First</h3>
+<p class="text-on-surface-variant">Apps designed with the "luminous" philosophy—fluid, tactile, and effortlessly powerful.</p>
+</div>
+<div class="md:col-span-8 bg-primary text-on-primary rounded-xl p-12 relative overflow-hidden">
+<div class="relative z-10 max-w-md">
+<h3 class="font-headline text-3xl font-bold mb-4">Web Experiences</h3>
+<p class="text-on-primary/80 text-lg">We don't build websites; we build digital destinations that convert through exceptional design and technical SEO.</p>
+</div>
+<!-- Abstract Background Shape -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-30">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,77.3,-44.7C85.4,-31.3,90.4,-15.6,91,0.3C91.5,16.3,87.6,32.6,79,46.5C70.4,60.4,57.1,71.9,42.4,78.8C27.7,85.7,11.5,88,3.2,82.5C-5.1,77,-10.1,63.7,-20.9,55.3C-31.7,46.9,-48.3,43.4,-61.5,33.8C-74.7,24.2,-84.5,8.4,-84.3,-7.4C-84.1,-23.3,-73.9,-39.2,-61.1,-49.5C-48.4,-59.8,-33,-64.6,-19.1,-71.4C-5.2,-78.2,7.3,-87,24.3,-86.6C41.3,-86.2,62.8,-76.6,44.7,-76.4Z" fill="#FFFFFF" transform="translate(100 100)"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Knowledge Transfer Section -->
+<section class="py-32 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="aspect-square glass-card rounded-xl p-2 relative">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Abstract vibrant purple and blue flowing liquid shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHJI3awlD4YsLU8-tlzQr7Wbl3XupO_BSWEFxmvY9VJDj7mag7xxtW3ihbRqJHd-NQI-Y_Vv2ZespKej-H6O_tC1zQDtnk4s5NU-v-B9wifkPJWlZ7zUynuvRs0a5M82fhIoL1PFMAiX__eXASrlIbpK9l4HThAg1k7BG3xTtAYaD6dIKMwjGKaSLGiRg-KN0qCjBYP4P3lCPOaJE3RVTPZlpTeh5kH3w_cw0r-L1smH8R8_Elirz-z3ox6CWXpdPqbpRpGXpNUb0"/>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-white p-6 rounded-xl shadow-xl flex flex-col justify-end">
+<span class="font-label text-xs font-bold text-primary mb-2 uppercase">Framework 01</span>
+<p class="text-sm font-bold leading-tight">AI Strategy &amp; Implementation</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<h2 class="font-headline text-3xl md:text-5xl font-bold tracking-tight">AI Education &amp; Strategic Frameworks</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        The revolution is already here. We help leadership teams understand not just the 'what' of AI, but the 'how'. Our strategic frameworks are designed to embed intelligence directly into your organizational DNA.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">school</span>
+<div>
+<h4 class="font-bold">Executive Literacy</h4>
+<p class="text-sm text-on-surface-variant">Bridging the gap between technical potential and business value.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">hub</span>
+<div>
+<h4 class="font-bold">Operational Integration</h4>
+<p class="text-sm text-on-surface-variant">Building workflows that augment human creativity with machine precision.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Final Vision Quote -->
+<section class="py-40 px-8 text-center max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-surface-variant text-6xl mb-8">format_quote</span>
+<h2 class="font-headline text-2xl md:text-4xl font-medium italic text-on-surface-variant leading-relaxed">
+                "We believe the best tools are those that disappear into the workflow, leaving only the results of enhanced human intelligence."
+            </h2>
+<div class="mt-12 flex flex-col items-center">
+<div class="w-16 h-[2px] luminous-glow mb-4"></div>
+<span class="font-label uppercase tracking-widest text-xs font-bold">The Enterventure Manifesto</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 full-width bottom-0 border-t border-slate-200/10">
+<div class="w-full py-12 px-8 flex flex-col items-center text-center max-w-7xl mx-auto">
+<!-- Brand Mark -->
+<div class="mb-8 opacity-40 grayscale group hover:grayscale-0 transition-all">
+<div class="w-10 h-10 rounded-full luminous-glow mx-auto flex items-center justify-center text-white text-[10px] font-bold">EV</div>
+</div>
+<!-- Copyright and Reg -->
+<div class="space-y-4">
+<p class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest leading-relaxed text-slate-500 dark:text-slate-500 max-w-2xl">
+                    Enterventure Limited, Company No. 05958159, Registered at Union House, 111 New Union Street, Coventry, CV1 2NT.
+                </p>
+<div class="flex gap-6 justify-center text-[10px] font-['Space_Grotesk'] text-slate-400">
+<a class="hover:text-indigo-500 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-indigo-500 transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="mt-12 text-[10px] font-label text-slate-400 opacity-50">
+                © 2024 Enterventure. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>
