@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Enterventure">
+  <rect width="64" height="64" rx="10" fill="#17202a"/>
+  <path d="M15 17h26v8H25v7h14v8H25v7h17v8H15V17Z" fill="#ffffff"/>
+  <path d="M43 17h8L37 55h-8l14-38Z" fill="#d65c45"/>
+</svg>
